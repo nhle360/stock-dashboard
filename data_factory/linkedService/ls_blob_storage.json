@@ -1,0 +1,19 @@
+{
+	"name": "ls_blob_storage",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"connectionString": "DefaultEndpointsProtocol=https;AccountName=rgfindashdevstorage;EndpointSuffix=core.windows.net;",
+			"accountKey": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "lv_key_vault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "BlobStorageKey"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
+}
